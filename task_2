@@ -1,0 +1,27 @@
+#include <iostream>
+#include <iomanip>
+
+const double USD_TO_EUR = 0.85;
+const double USD_TO_GBP = 0.75;
+const double USD_TO_JPY = 110.0;
+const double USD_TO_CNY = 6.45;
+const double USD_TO_RUB = 75.0;
+
+void convertCurrency(double amount) {
+    std::cout << std::fixed << std::setprecision(2);
+    std::cout << "Сумма в EUR: " << amount * USD_TO_EUR << std::endl;
+    std::cout << "Сумма в GBP: " << amount * USD_TO_GBP << std::endl;
+    std::cout << "Сумма в JPY: " << amount * USD_TO_JPY << std::endl;
+    std::cout << "Сумма в CNY: " << amount * USD_TO_CNY << std::endl;
+    std::cout << "Сумма в RUB: " << amount * USD_TO_RUB << std::endl;
+}
+
+int main() {
+    double amount;
+    std::cout << "Введите сумму в USD: ";
+    std::cin >> amount;
+
+    convertCurrency(amount);
+
+    return 0;
+}
